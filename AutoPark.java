@@ -8,10 +8,10 @@ public class AutoPark {
   private Driver[] drivers = new Driver[200];
 
 
-  public Car getCarByVin(String vin, String stateNumber) {
+  public Car getCarByVin(String vin) {
     for (Car element : garage) {
       if (element != null &&
-          (element.getVin() == vin || element.getStateNumber() == stateNumber)
+          (element.getVin() == vin )
       ) {
         return element;
       }
