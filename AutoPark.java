@@ -37,15 +37,14 @@ public class AutoPark {
     }
   }
 
-  public void SearchDriverFIO(Driver driver) {
-    for (int i = 0; i < this.drivers.length; i++) {
-      if (drivers[i] == null) {
-        drivers[i] = driver;
-        return;
+  public Driver addSearchFio(String fio) {
+    for (Driver element : drivers) {
+      if (element!=null && element.getFio() == fio) {
+        return element;
       }
     }
+    return null;
   }
-
 
   public Car[] getGarage() {
     return garage;
