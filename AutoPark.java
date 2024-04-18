@@ -24,6 +24,15 @@ public class AutoPark {
       }
     }
   }
+  public void addDriver(Driver driver){
+    for (int i = 0; i < this.drivers.length; i++) {
+      if (drivers [i] == null){
+        drivers[i] = driver;
+        return;
+      }
+
+    }
+  }
 
   public Car[] getGarage() {
     return garage;
